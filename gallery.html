@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OC 图库 | Shigehiro 茂宏</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="WJ/OC/Shigehiro/Head_Portrait/TX_001.PNG">
+</head>
+<body>
+
+    <!-- 顶部导航栏 -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html#gallery" class="nav-logo">
+                <span class="logo-paw"><i class="fas fa-paw"></i></span>
+                <span class="logo-text">Shigehiro</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html#home" class="nav-link">首页</a>
+                <a href="index.html#about" class="nav-link">关于</a>
+                <a href="index.html#gallery" class="nav-link">OC 画廊</a>
+                <a href="index.html#social" class="nav-link">社交</a>
+            </nav>
+
+            <!-- 主题切换开关 -->
+            <div class="theme-toggle-wrap">
+                <label class="theme-toggle" title="切换浅色/深色模式">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb">
+                            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="4.5"></circle>
+                                <line x1="12" y1="1.5" x2="12" y2="3.5"></line>
+                                <line x1="12" y1="20.5" x2="12" y2="22.5"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1.5" y1="12" x2="3.5" y2="12"></line>
+                                <line x1="20.5" y1="12" x2="22.5" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </span>
+                        <span class="toggle-cloud cloud-1"></span>
+                        <span class="toggle-cloud cloud-2"></span>
+                        <span class="toggle-star star-1">★</span>
+                        <span class="toggle-star star-2">✦</span>
+                        <span class="toggle-star star-3">✧</span>
+                    </span>
+                </label>
+            </div>
+
+            <button class="nav-burger" id="navBurger" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 图库页头 -->
+    <section class="gallery-hero" id="galleryHero">
+        <a href="index.html#gallery" class="back-btn"><i class="fas fa-arrow-left"></i> 返回画廊</a>
+        <h1 class="gallery-hero-title" id="ocTitle">OC 图库</h1>
+        <p class="gallery-hero-sub" id="ocSub">点击图片查看大图</p>
+    </section>
+
+    <!-- 图库内容 (JS 动态渲染) -->
+    <section class="gallery-detail" id="galleryDetail"></section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-paws">
+            <i class="fas fa-paw"></i><i class="fas fa-paw"></i><i class="fas fa-paw"></i>
+        </div>
+        <p class="footer-text">© 2026 Shigehiro 茂宏 · Made with <i class="fas fa-heart"></i> & fur</p>
+    </footer>
+
+    <!-- 灯箱 -->
+    <div class="lightbox" id="lightbox">
+        <button class="lb-close" id="lbClose" aria-label="关闭"><i class="fas fa-times"></i></button>
+        <button class="lb-prev" id="lbPrev" aria-label="上一张"><i class="fas fa-chevron-left"></i></button>
+        <button class="lb-next" id="lbNext" aria-label="下一张"><i class="fas fa-chevron-right"></i></button>
+        <div class="lb-stage">
+            <img src="" alt="大图" id="lbImage">
+        </div>
+        <p class="lb-counter" id="lbCounter"></p>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>
